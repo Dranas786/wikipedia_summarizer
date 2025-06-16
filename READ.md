@@ -48,6 +48,6 @@ Model: Hugging Face transformer-based summarization model.
 Why: Open-source, no API key required, easy integration with FastAPI, and effective for summarization tasks.
 
 Trade-offs:
-Avoided complex semantic ranking of Wikipedia pages due to minimal benefit and increased latency/complexity.
-Simplified search by using Wikipedia’s keyword matching to reduce overhead.
-Section-based summarization was tested but discarded due to inconsistent results.
+1. Avoided complex semantic ranking of Wikipedia pages due to minimal benefit and increased latency/complexity.
+2. Simplified search by using Wikipedia’s keyword matching to reduce overhead.
+3.  Section-based summarization was tested but discarded due to inconsistent results.
