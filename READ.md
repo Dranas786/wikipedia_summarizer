@@ -2,13 +2,14 @@
 
 A FastAPI service that scrapes and summarizes Wikipedia articles using Hugging Face models.
 
----
+# Github link
+
+https://github.com/Dranas786/wikipedia_summarizer
 
 ## Quick Start (with Docker)
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/{username}/webscraper_summary.git
+# 1. cd into directory
 cd webscraper_summary
 
 # 2. Build the Docker image
@@ -39,3 +40,14 @@ I experimented with using Hugging Face NLP models to semantically rank Wikipedia
 Additionally, I attempted to leverage Wikipedia sections to combine them with the query for more precise summarization. However, the section-based approach did not work reliably.
 
 Ultimately, I decided to keep it simple by relying on Wikipedia’s built-in keyword search and prompting users to clarify ambiguous queries. This method is faster, less complex, and effective for most structured topics.
+
+# Model used and trade-offs
+
+Model: Hugging Face transformer-based summarization model.
+
+Why: Open-source, no API key required, easy integration with FastAPI, and effective for summarization tasks.
+
+Trade-offs:
+Avoided complex semantic ranking of Wikipedia pages due to minimal benefit and increased latency/complexity.
+Simplified search by using Wikipedia’s keyword matching to reduce overhead.
+Section-based summarization was tested but discarded due to inconsistent results.
